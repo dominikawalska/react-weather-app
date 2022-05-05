@@ -1,0 +1,34 @@
+.main-window {
+  border: 1px solid #84a2f3;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.main-weather {
+  padding-top: 30px;
+  text-align: center;
+}
+
+.main-weather-icon {
+  position: relative;
+  top: -15px;
+  font-size: 50px;
+  margin-right: 10px;
+}
+
+.main-weather-temperature {
+  font-size: 50px;
+}
+
+.main-weather .units {
+  position: relative;
+  top: -25px;
+  font-size: 15px;
+}
+
+.wind-hum {
+  font-size: 20px;
+  text-align: right;
+  padding-top: 30px;
+}
