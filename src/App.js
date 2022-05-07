@@ -10,7 +10,7 @@ export default function App() {
       <div className="weather-app">
         <div className="weather-frame">
           <Search />
-          <MainWindow />
+          <MainWindow city="New York" />
           <div>
             <a
               href="https://github.com/dominikawalska/weather-react-app"
