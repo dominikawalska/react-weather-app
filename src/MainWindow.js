@@ -4,6 +4,7 @@ import Col from "react-bootstrap/Col";
 import CalculatedDate from "./CalculatedDate";
 import "./MainWindow.css";
 import MainIcon from "./MainIcon";
+import MainTemperature from "./MainTemperature";
 
 export default function MainWindow(props) {
   return (
@@ -21,11 +22,9 @@ export default function MainWindow(props) {
           <span className="main-weather-icon">
             <MainIcon icon={props.weatherData.icon} />
           </span>
-
           <span className="main-weather-temperature">
-            {Math.round(props.weatherData.temperature)}
+            <MainTemperature temperature={props.weatherData.temperature} />
           </span>
-          <span className="units">°C | °F </span>
         </Col>
 
         <Col className="wind-hum">
