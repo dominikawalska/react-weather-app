@@ -12,8 +12,7 @@
 
 .main-weather-icon {
   position: relative;
-  top: -15px;
-  font-size: 50px;
+  top: 10px;
   margin-right: 10px;
 }
 
@@ -30,5 +29,5 @@
 .wind-hum {
   font-size: 20px;
   text-align: right;
-  padding-top: 30px;
+  padding-top: 40px;
 }

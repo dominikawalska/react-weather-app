@@ -3,6 +3,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import CalculatedDate from "./CalculatedDate";
 import "./MainWindow.css";
+import MainIcon from "./MainIcon";
 
 export default function MainWindow(props) {
   return (
@@ -17,11 +18,10 @@ export default function MainWindow(props) {
         </Col>
 
         <Col className="main-weather">
-          <img
-            src={props.weatherData.iconUrl}
-            className="main-weather-icon"
-            alt={props.description}
-          ></img>
+          <span className="main-weather-icon">
+            <MainIcon icon={props.weatherData.icon} />
+          </span>
+
           <span className="main-weather-temperature">
             {Math.round(props.weatherData.temperature)}
           </span>
