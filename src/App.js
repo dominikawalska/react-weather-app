@@ -1,7 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
-import Search from "./Search";
-import MainWindow from "./MainWindow";
+import Weather from "./Weather";
 import Container from "react-bootstrap/Container";
 
 export default function App() {
@@ -9,8 +8,7 @@ export default function App() {
     <Container>
       <div className="weather-app">
         <div className="weather-frame">
-          <Search />
-          <MainWindow city="New York" />
+          <Weather city="London" />
           <div>
             <a
               href="https://github.com/dominikawalska/weather-react-app"
