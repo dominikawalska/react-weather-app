@@ -57,14 +57,10 @@ export default function Weather(props) {
                 type="submit"
                 value="Search"
                 className="search-button btn btn-primary w-100 btn-block"
-                onClick="this.blur();"
               />
             </Col>
             <Col sm={3}>
-              <Button
-                className="my-location-button btn btn-primary w-100 btn-block"
-                onClick="this.blur();"
-              >
+              <Button className="my-location-button btn btn-primary w-100 btn-block">
                 My location
               </Button>
             </Col>
