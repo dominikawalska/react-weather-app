@@ -19,5 +19,9 @@ export default function CalculatedDate(props) {
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
-  return `${day} ${hours}:${minutes}`;
+  return (
+    <div>
+      {day}, {hours}:{minutes}
+    </div>
+  );
 }

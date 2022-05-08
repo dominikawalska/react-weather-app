@@ -8,7 +8,7 @@ import Form from "react-bootstrap/Form";
 
 export default function Weather(props) {
   let [weatherConditions, setweatherConditions] = useState({ ready: false });
-  let [city, setCity] = useState();
+  let [city, setCity] = useState(props.defaultCity);
 
   function handleResponse(response) {
     setweatherConditions({
@@ -19,13 +19,19 @@ export default function Weather(props) {
       wind: response.data.wind.speed,
       humidity: response.data.main.humidity,
       date: new Date(response.data.dt * 1000),
-      iconUrl: "http://openweathermap.org/img/wn/10d@2x.png",
+      iconUrl: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
     });
+  }
+
+  function search() {
+    let apiKey = "38238442bc43441b21b268b1d3063e1b";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(handleResponse);
   }
 
   function handleSubmit(event) {
     event.preventDefault();
-    alert(city);
+    search();
   }
 
   function handleCityChange(event) {
@@ -68,10 +74,7 @@ export default function Weather(props) {
       </div>
     );
   } else {
-    let apiKey = "38238442bc43441b21b268b1d3063e1b";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.city}&appid=${apiKey}&units=metric`;
-    axios.get(apiUrl).then(handleResponse);
-
+    search();
     return "Loading...";
   }
 }
