@@ -20,7 +20,7 @@ export default function MainWindow(props) {
 
         <Col className="main-weather">
           <span className="main-weather-icon">
-            <MainIcon icon={props.weatherData.icon} />
+            <MainIcon icon={props.weatherData.icon} size={64} />
           </span>
           <span className="main-weather-temperature">
             <MainTemperature temperature={props.weatherData.temperature} />

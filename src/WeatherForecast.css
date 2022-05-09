@@ -1,0 +1,25 @@
+.weather-forecast {
+  margin-top: 20px;
+  text-align: center;
+  color: #5a6275;
+}
+
+.next-days {
+  border-right: 1px solid #84a2f3;
+}
+
+.forecast-day {
+  font-size: 18px;
+}
+
+.forecast-temperatures {
+  font-size: 13px;
+}
+
+.forecast-temperature-min {
+  opacity: 0.6;
+}
+
+.next-days:last-child {
+  border: none;
+}

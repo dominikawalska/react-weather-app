@@ -5,6 +5,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
+import WeatherForecast from "./WeatherForecast";
 
 export default function Weather(props) {
   let [weatherConditions, setweatherConditions] = useState({ ready: false });
@@ -67,6 +68,7 @@ export default function Weather(props) {
           </Row>
         </Form>
         <MainWindow weatherData={weatherConditions} />
+        <WeatherForecast />
       </div>
     );
   } else {
