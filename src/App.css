@@ -12,6 +12,10 @@ body {
   background-color: rgb(165, 189, 253, 0.2);
 }
 
+footer {
+  font-size: small;
+  margin-bottom: 0;
+}
 .weather-app {
   margin: 100px auto;
   max-width: 800px;

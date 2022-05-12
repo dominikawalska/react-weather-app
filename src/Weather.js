@@ -6,6 +6,7 @@ import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import WeatherForecast from "./WeatherForecast";
+import "./Weather.css";
 
 export default function Weather(props) {
   let [weatherConditions, setweatherConditions] = useState({ ready: false });
@@ -14,6 +15,7 @@ export default function Weather(props) {
   function handleResponse(response) {
     setweatherConditions({
       ready: true,
+      coordinates: response.data.coord,
       temperature: response.data.main.temp,
       city: response.data.name,
       description: response.data.weather[0].description,
@@ -57,18 +59,16 @@ export default function Weather(props) {
               <input
                 type="submit"
                 value="Search"
-                className="search-button btn btn-primary w-100 btn-block"
+                className="search-button w-100"
               />
             </Col>
             <Col sm={3}>
-              <Button className="my-location-button btn btn-primary w-100 btn-block">
-                My location
-              </Button>
+              <Button className="my-location-button w-100">My location</Button>
             </Col>
           </Row>
         </Form>
         <MainWindow weatherData={weatherConditions} />
-        <WeatherForecast />
+        <WeatherForecast coordinates={weatherConditions.coordinates} />
       </div>
     );
   } else {

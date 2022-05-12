@@ -12,8 +12,8 @@
 
 .main-weather-icon {
   position: relative;
-  top: 10px;
-  margin-right: 10px;
+  top: 15px;
+  margin-right: 5px;
 }
 
 .main-weather-temperature {

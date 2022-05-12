@@ -8,25 +8,26 @@ export default function App() {
     <Container>
       <div className="weather-app">
         <div className="weather-frame">
-          <Weather defaultCity="London" />
-          <div>
-            <a
-              href="https://github.com/dominikawalska/weather-react-app"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Open-sourced code
-            </a>{" "}
-            by{" "}
-            <a
-              href="https://github.com/dominikawalska"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Dominika Walska
-            </a>
-          </div>
+          <Weather defaultCity="Warsaw" />
         </div>
+
+        <footer>
+          <a
+            href="https://github.com/dominikawalska/weather-react-app"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Open-sourced code
+          </a>{" "}
+          by{" "}
+          <a
+            href="https://github.com/dominikawalska"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Dominika Walska
+          </a>
+        </footer>
       </div>
     </Container>
   );

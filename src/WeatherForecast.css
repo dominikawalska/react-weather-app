@@ -1,5 +1,5 @@
 .weather-forecast {
-  margin-top: 20px;
+  margin: 10px;
   text-align: center;
   color: #5a6275;
 }
@@ -10,6 +10,7 @@
 
 .forecast-day {
   font-size: 18px;
+  margin-bottom: 5px;
 }
 
 .forecast-temperatures {
@@ -18,6 +19,7 @@
 
 .forecast-temperature-min {
   opacity: 0.6;
+  margin-left: 5px;
 }
 
 .next-days:last-child {
