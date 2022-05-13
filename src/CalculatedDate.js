@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function CalculatedDate(props) {
+export default function CalculatedDate() {
   let days = [
     "Sunday",
     "Monday",
@@ -10,12 +10,14 @@ export default function CalculatedDate(props) {
     "Friday",
     "Saturday",
   ];
-  let day = days[props.date.getDay()];
-  let hours = props.date.getHours();
+
+  let date = new Date();
+  let day = days[date.getDay()];
+  let hours = date.getHours();
   if (hours < 10) {
     hours = `0${hours}`;
   }
-  let minutes = props.date.getMinutes();
+  let minutes = date.getMinutes();
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }

@@ -15,7 +15,7 @@ export default function WeatherForecastDay(props) {
   }
 
   function day() {
-    let date = new Date(props.forecast.dt * 1000);
+    let date = new Date();
     let day = date.getDay();
     let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
