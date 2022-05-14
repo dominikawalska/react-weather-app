@@ -22,6 +22,7 @@ export default function Weather(props) {
       wind: response.data.wind.speed,
       humidity: response.data.main.humidity,
       icon: response.data.weather[0].icon,
+      date: response.data.dt,
     });
   }
 
@@ -44,8 +45,8 @@ export default function Weather(props) {
     let latitude = position.coords.latitude;
     let longitude = position.coords.longitude;
     let apiKey = "38238442bc43441b21b268b1d3063e1b";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units="metric`;
-
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
+    console.log(apiUrl);
     axios.get(apiUrl).then(handleResponse);
   }
 
@@ -86,7 +87,10 @@ export default function Weather(props) {
           </Row>
         </Form>
         <MainWindow weatherData={weatherConditions} />
-        <WeatherForecast coordinates={weatherConditions.coordinates} />
+        <WeatherForecast
+          coordinates={weatherConditions.coordinates}
+          date={weatherConditions.date}
+        />
       </div>
     );
   } else {

@@ -10,15 +10,15 @@ export default function MainWindow(props) {
   return (
     <div className="main-window">
       <Row>
-        <Col>
+        <Col sm>
           <h1>{props.weatherData.city}</h1>
           <h3>
-            <CalculatedDate date={props.weatherData.date} />
+            <CalculatedDate />
           </h3>
           <h4 className="text-capitalize">{props.weatherData.description}</h4>
         </Col>
 
-        <Col className="main-weather">
+        <Col sm className="main-weather">
           <span className="main-weather-icon">
             <MainIcon icon={props.weatherData.icon} size={64} />
           </span>
@@ -27,7 +27,7 @@ export default function MainWindow(props) {
           </span>
         </Col>
 
-        <Col className="wind-hum">
+        <Col sm className="wind-hum">
           <div>
             Wind:{" "}
             <span className="wind">{Math.round(props.weatherData.wind)}</span>{" "}
