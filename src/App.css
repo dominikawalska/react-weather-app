@@ -33,3 +33,9 @@ footer {
   background-color: rgb(165, 189, 253, 0.3);
   border: none;
 }
+
+@media (max-width: 576px) {
+  .weather-app {
+    margin: 20px auto;
+  }
+}

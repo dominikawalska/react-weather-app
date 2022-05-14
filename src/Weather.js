@@ -87,10 +87,7 @@ export default function Weather(props) {
           </Row>
         </Form>
         <MainWindow weatherData={weatherConditions} />
-        <WeatherForecast
-          coordinates={weatherConditions.coordinates}
-          date={weatherConditions.date}
-        />
+        <WeatherForecast coordinates={weatherConditions.coordinates} />
       </div>
     );
   } else {

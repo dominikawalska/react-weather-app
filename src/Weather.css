@@ -32,3 +32,13 @@ form {
 .my-location-button:hover {
   background-color: rgb(90, 98, 117, 70%);
 }
+
+@media (max-width: 576px) {
+  .search-button {
+    margin: 10px 0;
+    font-size: 18px;
+  }
+  .my-location-button {
+    font-size: 18px;
+  }
+}

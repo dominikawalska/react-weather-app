@@ -14,7 +14,6 @@
   position: relative;
   top: 15px;
   margin-right: 5px;
- 
 }
 
 .main-weather-temperature {
@@ -31,4 +30,30 @@
   font-size: 20px;
   text-align: right;
   padding-top: 40px;
+}
+
+@media (max-width: 576px) {
+  h1 {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  h3 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  h4 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .main-weather-temperature {
+    font-size: 50px;
+  }
+
+  .wind-hum {
+    font-size: 15px;
+    text-align: center;
+  }
 }
