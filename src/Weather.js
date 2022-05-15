@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import axios from "axios";
 import MainWindow from "./MainWindow";
+import WeatherForecast from "./WeatherForecast";
+import "./Weather.css";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
-import WeatherForecast from "./WeatherForecast";
-import "./Weather.css";
 
 export default function Weather(props) {
   let [weatherConditions, setweatherConditions] = useState({ ready: false });
@@ -78,7 +78,7 @@ export default function Weather(props) {
             </Col>
             <Col sm={3}>
               <Button
-                className="my-location-button w-100"
+                className="btn my-location-button w-100"
                 onClick={getPosition}
               >
                 My location

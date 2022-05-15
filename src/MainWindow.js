@@ -4,7 +4,6 @@ import Col from "react-bootstrap/Col";
 import CalculatedDate from "./CalculatedDate";
 import "./MainWindow.css";
 import MainIcon from "./MainIcon";
-import MainTemperature from "./MainTemperature";
 
 export default function MainWindow(props) {
   return (
@@ -19,23 +18,23 @@ export default function MainWindow(props) {
         </Col>
 
         <Col sm className="main-weather">
-          <span className="main-weather-icon">
-            <MainIcon icon={props.weatherData.icon} size={64} />
-          </span>
-          <span className="main-weather-temperature">
-            <MainTemperature temperature={props.weatherData.temperature} />
+          <span>
+            <span className="main-weather-icon">
+              <MainIcon icon={props.weatherData.icon} size={64} />
+            </span>
+            <span className="main-weather-temperature">
+              {Math.round(props.weatherData.temperature)}
+            </span>
+            <span className="units"> °C</span>
           </span>
         </Col>
 
         <Col sm className="wind-hum">
           <div>
-            Wind:{" "}
-            <span className="wind">{Math.round(props.weatherData.wind)}</span>{" "}
-            km/h
+            Wind: <span>{Math.round(props.weatherData.wind)}</span> km/h
           </div>
           <div>
-            Humidity:{" "}
-            <span className="humidity">{props.weatherData.humidity}</span> %
+            Humidity: <span>{props.weatherData.humidity}</span> %
           </div>
         </Col>
       </Row>
