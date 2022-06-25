@@ -32,10 +32,13 @@ form {
   background-color: rgba(90, 98, 117, 0.7);
 }
 
-.my-location-button.btn:focus {
+.my-location-button,
+.button:active,
+.button:focus {
+  outline: none !important;
   box-shadow: none !important;
-  outline: 0;
 }
+
 @media (max-width: 576px) {
   .search-button {
     margin: 10px 0;

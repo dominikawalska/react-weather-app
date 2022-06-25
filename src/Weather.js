@@ -78,7 +78,7 @@ export default function Weather(props) {
             </Col>
             <Col sm={3}>
               <Button
-                className="btn my-location-button w-100"
+                className="button my-location-button w-100"
                 onClick={getPosition}
               >
                 My location
